@@ -33,9 +33,9 @@
                             <h5 class="uppercase font-bold mb-3">Nonsense</h5>
 
                             <ul class="list-reset">
-                               <li class="text-sm leading-loose"><router-link class="text-black"  to="/ccc">Ccc</router-link></li>
-                               <li class="text-sm leading-loose"><router-link class="text-black"  to="/ddd">Ddd</router-link></li>
-                               <li class="text-sm leading-loose"><router-link class="text-black"  to="/eee">Eee</router-link></li>
+                               <li class="text-sm leading-loose"><router-link class="text-black"  to="/ccc">Lies</router-link></li>
+                               <li class="text-sm leading-loose"><router-link class="text-black"  to="/ddd">Doom</router-link></li>
+                               <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'users.index' }">Users</router-link></li>
                                <li class="text-sm leading-loose"><router-link class="text-black"  to="/references">References</router-link></li>
                             </ul>
                         </section>

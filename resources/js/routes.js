@@ -7,6 +7,7 @@ import Ccc from "./components/Ccc";
 import Ddd from "./components/Ddd";
 import Eee from "./components/Eee";
 import References from "./components/References";
+import UsersIndex from "./components/UsersIndex";
 
 export default {
     mode:'history',
@@ -42,7 +43,12 @@ export default {
         }, {
             path: '/references',
             component: References
-        }
+        },
+        {
+            path: '/users',
+            name: 'users.index',
+            component: UsersIndex,
+        },
     ]
 
 }
