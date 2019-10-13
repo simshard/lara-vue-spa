@@ -1,9 +1,8 @@
 <template>
     <div class="users">
-        <div class="loading" v-if="loading">
+        <div class="loader loading " v-if="loading">
             Loading...
         </div>
-
         <div v-if="error" class="error">
             {{ error }}
         </div>
@@ -12,6 +11,7 @@
             <li v-for="{ id, name, email } in users">
                 <strong>Name:</strong> {{ name }},
                 <strong>Email:</strong> {{ email }}
+                <router-link :to="{ name: 'users.edit', params: { id } }" class="text-green-600 underline;">Edit</router-link>
             </li>
         </ul>
      <div class="pagination">

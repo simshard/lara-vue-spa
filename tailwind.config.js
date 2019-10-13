@@ -1,11 +1,19 @@
 module.exports = {
   theme: {
+
        fontFamily: {
-            display: ['Open Sans', 'sans-serif'],
-            body: ['Open Sans', 'sans-serif'],
-       },
-    extend: {}
+                     display: ['Open Sans', 'sans-serif'],
+                      body: ['Open Sans', 'sans-serif'],
+                          },
+                          extend: {}
+
+                  },
+
+
+  variants: {
+
   },
-  variants: {},
-  plugins: []
-}
+  plugins: [
+
+  ]
+};

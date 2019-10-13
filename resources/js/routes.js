@@ -8,6 +8,7 @@ import Ddd from "./components/Ddd";
 import Eee from "./components/Eee";
 import References from "./components/References";
 import UsersIndex from "./components/UsersIndex";
+import UsersEdit from './components/UsersEdit';
 
 export default {
     mode:'history',
@@ -24,8 +25,8 @@ export default {
         {
             path: '/about',
             component: About
-        }
-        , {
+        },
+        {
             path: '/aaa',
             component: Aaa
         }, {
@@ -49,6 +50,11 @@ export default {
             name: 'users.index',
             component: UsersIndex,
         },
+        {
+            path: '/users/:id/edit',
+            name: 'users.edit',
+            component: UsersEdit,
+        },
     ]
 
-}
+};

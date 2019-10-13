@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="lds-roller">
      <p>*</p>
  </div>
 
