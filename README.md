@@ -9,3 +9,6 @@ Simple SPA using Laravel and Vue  with vue-router
  Building a Vue SPA with Laravel 
  https://laravel-news.com/using-vue-router-laravel
 
+ CRUD api to create, edit and delete users
+ vue components use a axios users api class to simplify creation of endpoints 
+

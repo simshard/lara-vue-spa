@@ -2090,6 +2090,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2123,15 +2134,28 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (_) {
         return _this.saving = false;
       });
+    },
+    onDelete: function onDelete() {
+      var _this2 = this;
+
+      this.saving = true;
+      _api_users__WEBPACK_IMPORTED_MODULE_0__["default"]["delete"](this.user.id).then(function (response) {
+        _this2.message = 'User Deleted';
+        setTimeout(function () {
+          return _this2.$router.push({
+            name: 'users.index'
+          });
+        }, 2000);
+      });
     }
   },
   created: function created() {
-    var _this2 = this;
+    var _this3 = this;
 
     _api_users__WEBPACK_IMPORTED_MODULE_0__["default"].find(this.$route.params.id).then(function (response) {
       setTimeout(function () {
-        _this2.loaded = true;
-        _this2.user = response.data.data;
+        _this3.loaded = true;
+        _this3.user = response.data.data;
       }, 500);
     });
   }
@@ -20724,7 +20748,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "lds-roller" }, [_c("p", [_vm._v("*")])])
+    return _c("div", [_c("p", [_vm._v("*")])])
   }
 ]
 render._withStripped = true
@@ -21062,6 +21086,22 @@ var render = function() {
                   attrs: { type: "submit", disabled: _vm.saving }
                 },
                 [_vm._v("Update")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  attrs: { disabled: _vm.saving },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.onDelete($event)
+                    }
+                  }
+                },
+                [_vm._v("Delete")]
               )
             ])
           ]
@@ -36236,6 +36276,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   update: function update(id, data) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/users/".concat(id), data);
+  },
+  "delete": function _delete(id) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a["delete"]("/api/users/".concat(id));
   }
 });
 
