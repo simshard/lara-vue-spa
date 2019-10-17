@@ -9,6 +9,7 @@ import Eee from "./components/Eee";
 import References from "./components/References";
 import UsersIndex from "./components/UsersIndex";
 import UsersEdit from './components/UsersEdit';
+import UsersCreate from './components/UsersCreate';
 
 export default {
     mode:'history',
@@ -54,6 +55,11 @@ export default {
             path: '/users/:id/edit',
             name: 'users.edit',
             component: UsersEdit,
+        },
+        {
+            path: '/users/create',
+            name: 'users.create',
+            component: UsersCreate,
         },
     ]
 

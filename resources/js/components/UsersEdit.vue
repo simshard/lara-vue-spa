@@ -59,6 +59,7 @@ export default {
           email: this.user.email,
       }).then((response) => {
           this.message = 'User updated';
+
           setTimeout(() => this.message = null, 2000);
           this.user = response.data.data;
       }).catch(error => {
@@ -67,11 +68,12 @@ export default {
     },
 
     onDelete() {
-  this.saving = true;
-  api.delete(this.user.id)
-     .then((response) => {
-        this.message = 'User Deleted';
-        setTimeout(() => this.$router.push({ name: 'users.index' }), 2000);
+     this.saving = true;
+     api.delete(this.user.id)
+        .then((response) => {
+         // console.log(response);
+           this.message = 'User Deleted';
+           setTimeout(() => this.$router.push({ name: 'users.index' }), 2000);
      });
 },
 

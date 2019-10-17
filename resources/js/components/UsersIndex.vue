@@ -19,6 +19,10 @@
             {{ paginatonCount }}
             <button :disabled="! nextPage" @click.prevent="goToNext">Next</button>
         </div>
+        <button class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <router-link :to="{ name: 'users.create' }">Add User</router-link>
+        </button>
+
     </div>
 </template>
 <script>
